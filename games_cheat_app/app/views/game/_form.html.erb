@@ -1,0 +1,15 @@
+<%= form_for(@games) do |f| %>
+
+<div class="field"><%= f.label :name%><br>
+  <%= f.text_field :name%></div>
+
+  <div class="field"><%=f.label :console%><br>
+    <%= f.text_field :console%></div>
+
+    <div class="field"><%=f.label :user_id %><br>
+      <%= f.collection_select :user_id, User.all, :id, :name%></div>
+
+      <br>
+
+      <div> <f.submit "Add this game"> </div>
+         <% end %> 
